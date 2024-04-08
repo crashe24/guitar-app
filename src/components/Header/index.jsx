@@ -1,13 +1,8 @@
-//import { useMemo } from "react"
 
 const HeaderComponent = (props) => {
 
-    // state derivado
-  //const isEmpty =  useMemo(() => props.cart.length ===0, [props.cart])
-  //const totalQuantity = useMemo(() => props.cart.reduce((acc, item) => acc + (item.price * item.quantity),0 ),[props.cart])
 
    const handleDeleteToCart = (guitar) => {
-          //  console.log('guitar.id', guitar.id)
             props.deleteToCart(guitar)
    }   
 
