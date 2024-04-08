@@ -3,10 +3,6 @@ import React from 'react'
 
 const GuitarComponent = (props) => {
 
- // const handleClick = (guitar) => {
-   // props.setCart([...props.cart, guitar])
- //  props.setCart( (prevCart) => [...prevCart, guitar])
- // }
   
   return (
     <div className="col-md-6 col-lg-4 my-4 row align-items-center">

@@ -1,13 +1,13 @@
-import { useMemo } from "react"
+//import { useMemo } from "react"
 
 const HeaderComponent = (props) => {
 
     // state derivado
-  const isEmpty =  useMemo(() => props.cart.length ===0, [props.cart])
-  const totalQuantity = useMemo(() => props.cart.reduce((acc, item) => acc + (item.price * item.quantity),0 ),[props.cart])
+  //const isEmpty =  useMemo(() => props.cart.length ===0, [props.cart])
+  //const totalQuantity = useMemo(() => props.cart.reduce((acc, item) => acc + (item.price * item.quantity),0 ),[props.cart])
 
    const handleDeleteToCart = (guitar) => {
-            console.log('guitar.id', guitar.id)
+          //  console.log('guitar.id', guitar.id)
             props.deleteToCart(guitar)
    }   
 
@@ -27,7 +27,7 @@ const HeaderComponent = (props) => {
                     <img className="img-fluid" src="/img/carrito.png" alt="imagen carrito" />
 
                     <div id="carrito" className="bg-white p-3">
-                        { isEmpty ? (
+                        { props.isEmpty ? (
                             <p className="text-center">El carrito esta vacio</p>
                         ) : (
                             <>
@@ -86,7 +86,7 @@ const HeaderComponent = (props) => {
 
                                 </tbody>
                         </table>
-                        <p className="text-end">Total pagar: <span className="fw-bold">${totalQuantity}</span></p>
+                        <p className="text-end">Total pagar: <span className="fw-bold">${props.totalQuantity}</span></p>
                         <button className="btn btn-dark w-100 mt-3 p-2" onClick={props.clearCart}>Vaciar Carrito</button>
                         </>
                         )
